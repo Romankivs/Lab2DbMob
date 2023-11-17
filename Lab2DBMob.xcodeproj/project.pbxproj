@@ -11,6 +11,7 @@
 		F91012D52B02C8E9002C512F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91012D42B02C8E9002C512F /* ContentView.swift */; };
 		F91012D72B02C8EB002C512F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91012D62B02C8EB002C512F /* Assets.xcassets */; };
 		F91012DA2B02C8EB002C512F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F91012D92B02C8EB002C512F /* Preview Assets.xcassets */; };
+		F91012E22B02C972002C512F /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = F91012E12B02C972002C512F /* SQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F91012D42B02C8E9002C512F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F91012D62B02C8EB002C512F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F91012D92B02C8EB002C512F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F91012E52B02D816002C512F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F91012E22B02C972002C512F /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 		F91012D12B02C8E9002C512F /* Lab2DBMob */ = {
 			isa = PBXGroup;
 			children = (
+				F91012E52B02D816002C512F /* Info.plist */,
 				F91012D22B02C8E9002C512F /* Lab2DBMobApp.swift */,
 				F91012D42B02C8E9002C512F /* ContentView.swift */,
 				F91012D62B02C8EB002C512F /* Assets.xcassets */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = Lab2DBMob;
+			packageProductDependencies = (
+				F91012E12B02C972002C512F /* SQLite */,
+			);
 			productName = Lab2DBMob;
 			productReference = F91012CF2B02C8E9002C512F /* Lab2DBMob.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = F91012C62B02C8E9002C512F;
+			packageReferences = (
+				F91012E02B02C972002C512F /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = F91012D02B02C8E9002C512F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,6 +284,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Lab2DBMob/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lab2DBMob/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "We need access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +314,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Lab2DBMob/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Lab2DBMob/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "We need access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -342,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F91012E02B02C972002C512F /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F91012E12B02C972002C512F /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F91012E02B02C972002C512F /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F91012C72B02C8E9002C512F /* Project object */;
 }
